@@ -1,0 +1,681 @@
+/* trbl */
+
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+body {
+  line-height: 1.2;
+  -webkit-font-smoothing: antialiased;
+  background-color: #fff;
+  height: 100%;
+}
+
+.appStoreIcon {
+  width: 22%;
+  height: 100% !important;
+  align-self: center;
+}
+
+a {
+  color: #000;
+  text-decoration: none;
+}
+
+.navbar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 100%;
+  height: 70px;
+  z-index: 1;
+  padding-top: 70px;
+}
+
+.nav {
+  display: flex;
+  justify-content: right;
+  list-style: none;
+  margin-right: 10%;
+  font-family: 'Quicksand', 'sans-serif';
+  font-weight: 600;
+}
+
+.nav i {
+  padding-left: 0px;
+}
+
+.logo {
+  flex: 1 1 auto;
+  margin-left: 10%;
+  font-family: 'Quicksand', 'sans-serif';
+  font-weight: 900;
+  color: red;
+  text-decoration: none;
+}
+
+.nav a {
+  margin: 15px;
+  color: #000;
+  text-decoration: none;
+}
+
+.navbar a:hover {
+  text-decoration-color: red;
+  text-decoration-line: underline;
+}
+
+/* ------ Intro Sect ------ */
+
+.introSection {
+  display: flex;
+  flex-direction: column;
+  padding: 130px 100px 0px 120px;
+}
+
+.introHeadline {
+  font-family: 'Open Sans Condensed', 'sans-serif';
+  font-weight: 700;
+  font-size: 40px;
+  padding-bottom: 15px;
+  line-height: 1.3;
+  max-width: 90%;
+}
+
+.introDesc {
+  font-family: 'Open Sans Condensed', 'sans-serif';
+  font-weight: 700;
+  font-size: 40px;
+  max-width: 95%;
+  line-height: 1.4;
+  padding-bottom: 5px;
+}
+
+.introDesc em {
+  color: #d5393a;
+  text-decoration: none;
+  font-style: normal;
+}
+
+.introLink {
+  font-family: 'Open Sans Condensed', 'sans-serif';
+  font-weight: 700;
+  font-size: 25px;
+  max-width: 100%;
+  line-height: 1.3;
+}
+
+/* ------ Skill Section ------ */
+
+.skillsContainer {
+  display: flex;
+  flex-direction: column;
+  padding: 100px 100px 0px 120px;
+  align-items: left;
+}
+
+.skillsSection {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  max-width: 100%;
+  justify-content: left;
+  padding-top: 20px;
+}
+
+.skilTitle {
+  font-family: 'Open Sans Condensed', 'sans-serif';
+  font-weight: 700;
+  font-size: 35px;
+  color: black;
+  padding-bottom: 15px;
+  text-decoration: underline;
+  text-decoration-color: red;
+}
+
+.skillSubtitle {
+  font-family: 'Open Sans Condensed', 'sans-serif';
+  font-weight: 700;
+  font-size: 25px;
+  color: gray;
+}
+
+.skillDesc {
+  font-family: 'Open Sans Condensed', 'sans-serif';
+  font-weight: 300;
+  font-size: 25px;
+  color: black;
+}
+
+.skillCard {
+  border-color: #ECEFF3;
+  border-radius: 12px;
+  box-shadow: 0px 4px 4px 0px rgba(233, 240, 243, 0.4);
+  border: 0.0625rem solid rgba(0,0,0,0.08);
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  margin: 1rem;
+
+  font-family: 'Open Sans Condensed', 'sans-serif';
+  font-weight: 300;
+  font-size: 25px;
+
+  width: 170px;
+  height: 170px;
+}
+
+.skillImage {
+  width: 30%;
+  height: auto;
+}
+
+/* ------ Apps Section ------ */
+
+.projectsSections {
+  display: flex;
+  flex-direction: column;
+  padding: 95px 80px 0px 120px;
+}
+
+.projectsContainer {
+  border-color: #ECEFF3;
+  border-radius: 12px;
+  box-shadow: 0px 4px 4px 0px rgba(233, 240, 243, 0.4);
+  border: 0.0625rem solid rgba(0,0,0,0.08);
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 1.5rem;
+  margin-bottom: 2rem;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.left {
+  /* flex: 1; */
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  align-content: center;
+  align-self: center;
+  flex-direction: column;
+  /* background-color: #f2f2f2; */
+  /* height: #right; */
+  order: 1;
+}
+
+.right {
+  border-radius: 12px;
+  /* height: 100%; */
+  /* flex: 1; */
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-content: center;
+  align-items: center;
+  padding-top: 25px;
+
+  order: 1;
+}
+
+.appScreenImage {
+  width: 25%;
+  height: auto;
+}
+
+.projectTitle {
+  font-family: 'Open Sans Condensed', 'sans-serif';
+  text-align: left;
+  font-size: 40px;
+  font-weight: 700;
+  padding-top: 20px;
+  max-width: 500px;
+  line-height: 1.3;
+}
+
+.projectDesc {
+  font-family: 'Open Sans Condensed', 'sans-serif';
+  color: #535353;
+  text-align: center;
+  font-size: 30px;
+  font-weight: 300;
+  max-width: 90%;
+  padding-top: 15px;
+  padding-bottom: 30px;
+  line-height: 1.6;
+}
+
+.card-buttons-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  /* align-items: left; */
+}
+
+.card-button {
+  padding: 0.3em 1em;
+  text-decoration: none;
+  color: white;
+  background-color: #DE4D50;
+  border: solid 1px #DE4D50;
+  border-radius: 5px;
+  margin: 10px;
+  font-size: 24px;
+  font-family: 'Open Sans Condensed', 'sans-serif';
+}
+
+/* ------ Story Section ------ */
+
+.storySection {
+  display: flex;
+  flex-direction: column;
+  padding: 100px 100px 100px 100px;
+  align-items: center;
+}
+
+.storySection a {
+  align-items: center;
+}
+
+.storyScreens {
+  display: flex;
+  flex-direction: row;
+  padding-top: 30px;
+  padding-bottom: 60px;
+  justify-content: space-around;
+}
+
+.iconImage {
+  width: 140px;
+  height: 140px;
+  border-radius: 17.544%;
+}
+
+.storyImage {
+  width: 25%;
+  height: 100% !important;
+}
+
+.rImage {
+  width: 85%;
+  height: auto;
+  padding-bottom: 30px;
+  padding-top: 20px;
+  align-self: center;
+}
+
+.storyTitle {
+  font-family: 'Quicksand', 'sans-serif';
+  text-align: left;
+  font-size: 40px;
+  font-weight: 700;
+  padding-top: 30px;
+  padding-bottom: 10px;
+  max-width: 500px;
+  line-height: 1.3;
+}
+
+.storySubtitle {
+  font-family: 'Quicksand', 'sans-serif';
+  font-weight: 700;
+  font-size: 25px;
+  color: gray;
+  padding-bottom: 25px;
+}
+
+.storyDesc {
+  font-family: 'Quicksand', 'sans-serif';
+  text-align: left;
+  font-size: 22px;
+  font-weight: 600;
+  max-width: 95%;
+  padding-top: 15px;
+  padding-bottom: 20px;
+  line-height: 1.7;
+}
+
+.techStackSection {
+  background-color: #f3f3f3;
+  width: 100%;
+  padding: 50px 100px 100px 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.tsList {
+  display: flex;
+  flex-direction: column;
+  font-family: 'Quicksand', 'sans-serif';
+  font-size: 22px;
+  text-decoration: none;
+  padding-top: 20px;
+}
+
+.tsListItem {
+  padding-bottom: 15px;
+  text-align: left;
+}
+
+.tsList em {
+  font-weight: 600;
+  font-style: normal;
+}
+
+/* ------------ Nuclei Section ------------ */
+
+.nucleiSection {
+  display: flex;
+  flex-direction: column;
+  padding: 100px 80px 50px 120px;
+}
+
+.nucleiRight {
+  border-radius: 12px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  padding-top: 25px;
+  order: 1;
+}
+
+.nuciPad {
+  width: 50%;
+  height: auto;
+}
+
+.nucPhone {
+  width: 30%;
+  height: auto;
+}
+
+/* ------------ Footer Section ------------ */
+
+.footerSection {
+  background-color: #f3f3f3;
+  display: flex;
+  flex-direction: column;
+  padding: 20px 80px 30px 120px;
+}
+
+.footerTitle {
+  font-family: 'Open Sans Condensed', 'sans-serif';
+  font-size: 40px;
+  font-weight: 700;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  color: black;
+  text-decoration: underline;
+  text-decoration-color: red;
+}
+
+.footerText {
+  color: black;
+  font-family: 'Open Sans Condensed', 'sans-serif';
+  font-weight: 700;
+  font-size: 25px;
+  padding-bottom: 10px;
+}
+
+.footerText em {
+  text-decoration: underline;
+  font-style: normal;
+}
+
+/* ------------ About Section ------------ */
+
+.aboutSection {
+  display: flex;
+  flex-direction: column;
+  padding: 130px 150px 50px 180px;
+}
+
+.aboutImage {
+  width: 55%;
+  height: auto;
+  align-self: center;
+  padding-bottom: 80px;
+}
+
+.aboutBullet {
+  font-family: 'Open Sans Condensed', 'sans-serif';
+  text-align: left;
+  font-size: 26px;
+  font-weight: 700;
+  line-height: 1.3;
+  padding-bottom: 10px;
+  padding-top: 15px;
+  color: #d5393a;
+}
+
+.aboutDesc-type1 {
+  font-family: 'Open Sans Condensed', 'sans-serif';
+  text-align: left;
+  font-size: 30px;
+  font-weight: 700;
+  line-height: 1.3;
+  padding-bottom: 25px;
+  max-width: 95%;
+}
+
+.aboutDesc-type2 {
+  font-family: 'Open Sans Condensed', 'sans-serif';
+  text-align: left;
+  font-size: 30px;
+  font-weight: 300;
+  line-height: 1.3;
+  padding-bottom: 50px;
+  max-width: 95%;
+}
+
+.aboutDesc-type2 a {
+    border-bottom: 1px solid #d5393a;
+    color: #d5393a;
+}
+
+/* ------------ Screen adjustments ------------ */
+
+@media screen and (max-width: 768px) {
+
+  .navbar {
+    padding-top: 35px;
+    justify-content: flex-start;
+  }
+
+  .nav {
+    margin-left: 6.3%
+  }
+
+  .logo {
+    flex: none;
+    margin-bottom: 3%;
+  }
+
+  /* ---------- Intro --------- */
+
+  .introSection {
+    padding: 75px 35px 0px 35px;
+  }
+
+  .introHeadline {
+    font-size: 30px;
+  }
+
+  .introDesc {
+    font-size: 30px;
+  }
+
+  /* ---------- Apps --------- */
+
+  .projectsSections {
+    padding: 30px 35px 0px 35px;
+  }
+
+  .projectsContainer {
+    padding-top: 30px;
+  }
+
+  .iconImage {
+    width: 25%;
+    height: auto;
+  }
+
+  .projectTitle {
+    font-size: 35px;
+    max-width: 95%;
+    text-align: center;
+  }
+
+  .projectDesc {
+    font-size: 27px;
+  }
+
+  .card-button {
+    font-size: 20px;
+  }
+
+  .right {
+    flex-direction: column;
+  }
+
+  .appScreenImage {
+    width: 90%;
+    height: auto;
+  }
+
+
+  /* ---------- Skills --------- */
+
+  .skillsContainer {
+    padding: 50px 35px 0px 35px;
+    flex-direction: column;
+  }
+
+  .skillsSection {
+    justify-content: space-around;
+  }
+
+  .skillCard {
+    width: 135px;
+    height: 135px;
+    margin: 0.2rem;
+  }
+
+  /* ---------- Nuclei --------- */
+
+  .nucleiSection {
+    padding: 80px 35px 0px 35px;
+  }
+
+  .nucleiRight {
+    flex-direction: column;
+  }
+
+  .nuciPad {
+    width: 80%;
+    height: auto;
+  }
+
+  .nucPhone {
+    display: none;
+  }
+
+  /* ---------- Footer --------- */
+
+  .footerSection {
+    padding: 30px 35px 30px 35px;
+  }
+
+  .footerTitle {
+    font-size: 35px;
+  }
+
+  .footerText {
+    font-size: 22px;
+  }
+
+  /* -------- Story Section ------- */
+
+  .storySection {
+    padding: 120px 30px 30px 30px;
+  }
+
+  .storyTitle {
+    font-size: 30px;
+  }
+
+  .storySubtitle {
+    font-size: 20px;
+    text-align: center;
+  }
+
+  .storyDesc {
+    font-size: 18px;
+  }
+
+  .appStoreIcon {
+    width: 45%;
+  }
+
+  .storyScreens {
+    display: none;
+  }
+
+  /* -------- Tech Stack ------- */
+
+  .techStackSection {
+    padding: 60px 60px 30px 60px;
+  }
+
+  .tsList {
+    font-size: 20px;
+  }
+
+  .tsListItem {
+    padding-bottom: 20px;
+    text-align: left;
+  }
+
+  /* -------- About Section ------- */
+
+  .aboutSection {
+    padding: 130px 30px 30px 30px;
+  }
+
+  .aboutBullet {
+    font-size: 22px;
+  }
+
+  .aboutDesc-type1 {
+    font-size: 27px;
+  }
+
+  .aboutDesc-type2 {
+    font-size: 27px;
+  }
+}
+
+
+/* ------------ colors ------------ */
+
+#timeTableColor {
+  background-color: #f72064;
+}
+
+#news10Color {
+  background-color: #d5393a;
+}
+
+#theLeaderboardsColor {
+  background-color: #d0021b;
+}
