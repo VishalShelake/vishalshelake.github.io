@@ -1,0 +1,23 @@
+{
+    "applinks": {
+        "apps": [],
+        "details": [
+            {
+                "appID": "D2XKHSW2B8.com.esdsapps.enlightmeet",
+                "paths": [ "*"]
+            },
+            {
+                "appID": "D2XKHSW2B8.com.vishal.UniversalLinks.UniversalLinks",
+                "paths": [ "*"]
+            },
+            {
+                "appID": "WZW3T2QL2P.com.vishal-Universal-Linkage-Test",
+                "paths": [ "*"]
+            },
+            {
+                "appID": "WZW3T2QL2P.com.irevomm.aldovcall",
+                "paths": [ "*"]
+            }
+        ]
+    }
+}
