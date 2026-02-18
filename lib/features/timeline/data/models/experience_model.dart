@@ -23,6 +23,31 @@ class ExperienceModel {
   /// Sample experience data for the portfolio
   static const List<ExperienceModel> sampleExperiences = [
     ExperienceModel(
+      company: 'Globant',
+      role: 'Senior Mobile Engineer',
+      duration: 'May 2022 – Present',
+      period: '2022 – Present',
+      description:
+          'Spearheading mission-critical mobile initiatives for global enterprise clients in Entertainment, Sports, and Banking sectors. Specialist in building high-performance, scalable applications using Flutter and SwiftUI with a focus on \'Clean\' architecture and BFF patterns.',
+      achievements: [
+        'Led the frontend development of the VOX 2.0 Super App (Flutter), unifying Booking, F&B, and Loyalty for millions of users across MENA.',
+        'Modernized Royal Caribbean guest experience platform with scalable components and GraphQL integration, ensuring 99.9% app stability.',
+        'Engineered the LA Clippers Intuit Dome staff app (SwiftUI), integrating advanced hardware (NFC, Biometrics) for real-time fan engagement.',
+        'Developed the Wizing Bank bilingual app, implementing secure financial transactions and a robust component library.',
+        'Championed the adoption of Clean Architecture (MVVM) and TDD, significantly reducing technical debt and accelerating release cycles.',
+      ],
+      techStack: [
+        'Flutter',
+        'SwiftUI',
+        'Dart',
+        'GraphQL',
+        'NFC',
+        'Clean Architecture',
+        'CI/CD'
+      ],
+      isCurrent: true,
+    ),
+    ExperienceModel(
       company: 'ESDS Software Solution Pvt. Ltd.',
       role: 'iOS / Flutter Application Developer',
       duration: 'Feb 2021 – April 2022',
@@ -37,7 +62,7 @@ class ExperienceModel {
         'Participated in client meetings to translate business needs into technical specifications.',
       ],
       techStack: ['Flutter', 'iOS', 'Dart', 'REST API', 'App Store Connect'],
-      isCurrent: true,
+      isCurrent: false,
     ),
     ExperienceModel(
       company: 'Solace Infotech, Nashik',
