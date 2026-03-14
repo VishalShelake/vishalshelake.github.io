@@ -3,13 +3,23 @@ import 'package:flutter/material.dart';
 import 'package:portfolio_vishal/shared/widgets/glassmorphic_card.dart';
 import 'package:portfolio_vishal/shared/widgets/custom_button.dart' as custom;
 import 'package:portfolio_vishal/shared/widgets/section_badge.dart';
-import 'package:portfolio_vishal/core/theme/app_colors.dart';
+
 import 'package:portfolio_vishal/core/theme/app_typography.dart';
 import 'package:portfolio_vishal/core/constants/app_constants.dart';
 
 /// Hero section with years of experience
 class HeroSection extends StatelessWidget {
-  const HeroSection({super.key});
+  /// Called when the user taps "Download Resume"
+  final VoidCallback? onDownloadResume;
+
+  /// Called when the user taps "View Timeline"
+  final VoidCallback? onViewTimeline;
+
+  const HeroSection({
+    super.key,
+    this.onDownloadResume,
+    this.onViewTimeline,
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -58,16 +68,12 @@ class HeroSection extends StatelessWidget {
                 text: 'Download Resume',
                 icon: Icons.download,
                 buttonStyle: custom.ButtonStyle.primary,
-                onPressed: () {
-                  // TODO: Implement resume download
-                },
+                onPressed: onDownloadResume,
               ),
               custom.CustomButton(
                 text: 'View Timeline',
                 buttonStyle: custom.ButtonStyle.secondary,
-                onPressed: () {
-                  // TODO: Implement timeline view
-                },
+                onPressed: onViewTimeline,
               ),
             ],
           ),

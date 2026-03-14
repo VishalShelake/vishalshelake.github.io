@@ -31,12 +31,14 @@ class _ProjectsScreenState extends State<ProjectsScreen>
 
   List<ProjectModel> get _filteredProjects {
     if (_selectedCategory == 'All') {
-      return ProjectModel.sampleProjects;
+      return ProjectModel.sampleProjects.reversed.toList();
     }
     return ProjectModel.sampleProjects
         .where((project) =>
             project.mainCategory == _selectedCategory ||
             project.categories.contains(_selectedCategory))
+        .toList()
+        .reversed
         .toList();
   }
 

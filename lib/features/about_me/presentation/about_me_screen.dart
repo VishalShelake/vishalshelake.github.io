@@ -67,7 +67,7 @@ class _AboutMeScreenState extends State<AboutMeScreen>
                             ),
                             const SizedBox(height: AppConstants.spacing16),
                             Text(
-                              '8 Years of crafting scalable mobile experiences. From Objective-C memory management to reactive Flutter architectures.',
+                              'Senior Mobile Engineer — iOS & Flutter. Architecting scalable apps, leading teams, and shipping with AI-powered velocity.',
                               style: AppTypography.bodyMedium.copyWith(
                                 color: AppColors.textSecondary,
                               ),
@@ -148,9 +148,9 @@ class _AboutMeScreenState extends State<AboutMeScreen>
           delay: const Duration(milliseconds: 300),
           child: const ExperienceEraCard(
             icon: Icons.phone_iphone,
-            title: 'The iOS Era (2016-2020)',
+            title: 'The iOS Era (2016–2020)',
             description:
-                "It all began soon after I realised my interest in computers. Today, I'm interested in iOS development because of the high number of iOS users in large domestic demographic, as well as Apple's customer-friendly attitude. Learning Swift and understanding the inner workings of app development has been a lot of fun for me. It's a fascinating tale. When I was growing up, I was used to using Windows computers and was comfortable with the Windows environment, so seeing someone using the Mac Operating System was unusual. When I was in college, one of my friends brought his MacBook Air, and I had the opportunity to handle it, but to be honest, I had no idea how to use it because everything was disregarded as coming from a Windows environment. This piqued my interest in learning more about the Apple ecosystem, and I fell in love with it, thus my journey began. When it comes to iOS programming, The first few years were quite difficult. I'm not sure where to begin, and I don't have a Mac system to work with. Fortunately, I was able to obtain my own Mac Mini, and things became much easier. As I come from an area where I am aware of the lack of senior resources to assist me, I chose an out of the box track for me with the same effects on any simpler task where I can get stuck, which is very heartbreaking for a fresher developer. A small task took me 1 2 weeks to resolve as I learned everything through trial and error, so I am not afraid of any new challenges and functionality to be implemented after conducting extensive research.",
+                'Began my mobile career building native iOS apps with Swift and Objective-C — shipping production features across App Store releases, mastering UIKit, Core Data, and RESTful integrations. Developed a strong foundation in Apple\'s ecosystem by driving quality in resource-constrained environments where independent problem-solving was essential.',
           ),
         ),
         const SizedBox(height: AppConstants.spacing24),
@@ -161,7 +161,7 @@ class _AboutMeScreenState extends State<AboutMeScreen>
             icon: Icons.flutter_dash,
             title: 'The Flutter Transition',
             description:
-                "Hybrid Mobile Application development. I was given the opportunity to build a hybrid application that supported both Android and iOS platforms. I accepted the challenge and began developing the application in react native. However, I soon realised that react required me to learn a lot of new languages that took me longer to understand than flutter, so I came up with the idea to develop the application in flutter and completed it in two months.",
+                'Architected and delivered a full cross-platform Flutter application supporting both iOS and Android — reducing build complexity compared to a native dual-track approach. This strategic pivot toward unified mobile engineering now defines my core stack and enables faster, higher-quality delivery.',
           ),
         ),
         const SizedBox(height: AppConstants.spacing24),
@@ -229,9 +229,9 @@ class _AboutMeScreenState extends State<AboutMeScreen>
           delay: const Duration(milliseconds: 300),
           child: const ExperienceEraCard(
             icon: Icons.phone_iphone,
-            title: 'The iOS Era (2016-2020)',
+            title: 'The iOS Era (2016–2020)',
             description:
-                "It all began soon after I realised my interest in computers. Today, I'm interested in iOS development because of the high number of iOS users in large domestic demographic, as well as Apple's customer-friendly attitude. Learning Swift and understanding the inner workings of app development has been a lot of fun for me. It's a fascinating tale. When I was growing up, I was used to using Windows computers and was comfortable with the Windows environment, so seeing someone using the Mac Operating System was unusual. When I was in college, one of my friends brought his MacBook Air, and I had the opportunity to handle it, but to be honest, I had no idea how to use it because everything was disregarded as coming from a Windows environment. This piqued my interest in learning more about the Apple ecosystem, and I fell in love with it, thus my journey began. When it comes to iOS programming, The first few years were quite difficult. I'm not sure where to begin, and I don't have a Mac system to work with. Fortunately, I was able to obtain my own Mac Mini, and things became much easier. As I come from an area where I am aware of the lack of senior resources to assist me, I chose an out of the box track for me with the same effects on any simpler task where I can get stuck, which is very heartbreaking for a fresher developer. A small task took me 1 2 weeks to resolve as I learned everything through trial and error, so I am not afraid of any new challenges and functionality to be implemented after conducting extensive research.",
+                'Began my mobile career building native iOS apps with Swift and Objective-C — shipping production features across App Store releases, mastering UIKit, Core Data, and RESTful integrations. Developed a strong foundation in Apple\'s ecosystem by driving quality in resource-constrained environments where independent problem-solving was essential.',
           ),
         ),
         const SizedBox(height: AppConstants.spacing24),
@@ -242,7 +242,7 @@ class _AboutMeScreenState extends State<AboutMeScreen>
             icon: Icons.flutter_dash,
             title: 'The Flutter Transition',
             description:
-                "Hybrid Mobile Application development. I was given the opportunity to build a hybrid application that supported both Android and iOS platforms. I accepted the challenge and began developing the application in react native. However, I soon realised that react required me to learn a lot of new languages that took me longer to understand than flutter, so I came up with the idea to develop the application in flutter and completed it in two months.",
+                'Architected and delivered a full cross-platform Flutter application supporting both iOS and Android — reducing build complexity compared to a native dual-track approach. This strategic pivot toward unified mobile engineering now defines my core stack and enables faster, higher-quality delivery.',
           ),
         ),
         const SizedBox(height: AppConstants.spacing24),
@@ -328,9 +328,9 @@ class _AboutMeScreenState extends State<AboutMeScreen>
                 delay: const Duration(milliseconds: 300),
                 child: const ExperienceEraCard(
                   icon: Icons.phone_iphone,
-                  title: 'The iOS Era (2016-2020)',
+                  title: 'The iOS Era (2016–2020)',
                   description:
-                      "It all began soon after I realised my interest in computers. Today, I'm interested in iOS development because of the high number of iOS users in large domestic demographic, as well as Apple's customer-friendly attitude. Learning Swift and understanding the inner workings of app development has been a lot of fun for me. It's a fascinating tale. When I was growing up, I was used to using Windows computers and was comfortable with the Windows environment, so seeing someone using the Mac Operating System was unusual. When I was in college, one of my friends brought his MacBook Air, and I had the opportunity to handle it, but to be honest, I had no idea how to use it because everything was disregarded as coming from a Windows environment. This piqued my interest in learning more about the Apple ecosystem, and I fell in love with it, thus my journey began. When it comes to iOS programming, The first few years were quite difficult. I'm not sure where to begin, and I don't have a Mac system to work with. Fortunately, I was able to obtain my own Mac Mini, and things became much easier. As I come from an area where I am aware of the lack of senior resources to assist me, I chose an out of the box track for me with the same effects on any simpler task where I can get stuck, which is very heartbreaking for a fresher developer. A small task took me 1 2 weeks to resolve as I learned everything through trial and error, so I am not afraid of any new challenges and functionality to be implemented after conducting extensive research.",
+                      'Began my mobile career building native iOS apps with Swift and Objective-C — shipping production features across App Store releases, mastering UIKit, Core Data, and RESTful integrations. Developed a strong foundation in Apple\'s ecosystem by driving quality in resource-constrained environments where independent problem-solving was essential.',
                 ),
               ),
             ),
@@ -343,7 +343,7 @@ class _AboutMeScreenState extends State<AboutMeScreen>
                   icon: Icons.flutter_dash,
                   title: 'The Flutter Transition',
                   description:
-                      "Hybrid Mobile Application development. I was given the opportunity to build a hybrid application that supported both Android and iOS platforms. I accepted the challenge and began developing the application in react native. However, I soon realised that react required me to learn a lot of new languages that took me longer to understand than flutter, so I came up with the idea to develop the application in flutter and completed it in two months.",
+                      'Architected and delivered a full cross-platform Flutter application supporting both iOS and Android — reducing build complexity compared to a native dual-track approach. This strategic pivot toward unified mobile engineering now defines my core stack and enables faster, higher-quality delivery.',
                 ),
               ),
             ),

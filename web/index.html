@@ -45,7 +45,136 @@
 </head>
 
 <body>
+
+  <!-- ── Splash / pulsing loader ── -->
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    #splash {
+      position: fixed;
+      inset: 0;
+      background: #0d1117;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 32px;
+      z-index: 9999;
+      transition: opacity 0.6s ease, visibility 0.6s ease;
+    }
+
+    #splash.hidden {
+      opacity: 0;
+      visibility: hidden;
+    }
+
+    /* Pulsing rings */
+    .ring-wrapper {
+      position: relative;
+      width: 120px;
+      height: 120px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .ring {
+      position: absolute;
+      border-radius: 50%;
+      border: 2px solid #3b82f6;
+      opacity: 0;
+      animation: pulse-ring 2.4s ease-out infinite;
+    }
+
+    .ring:nth-child(1) { width: 80px;  height: 80px;  animation-delay: 0s; }
+    .ring:nth-child(2) { width: 100px; height: 100px; animation-delay: 0.4s; }
+    .ring:nth-child(3) { width: 120px; height: 120px; animation-delay: 0.8s; }
+
+    @keyframes pulse-ring {
+      0%   { transform: scale(0.6); opacity: 0.8; }
+      100% { transform: scale(1.2); opacity: 0; }
+    }
+
+    /* Avatar circle */
+    .avatar {
+      width: 64px;
+      height: 64px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, #3b82f6 0%, #8b5cf6 100%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: 'Segoe UI', system-ui, sans-serif;
+      font-size: 22px;
+      font-weight: 700;
+      color: #fff;
+      letter-spacing: 1px;
+      z-index: 1;
+      box-shadow: 0 0 24px rgba(59, 130, 246, 0.45);
+    }
+
+    /* Label */
+    .splash-label {
+      font-family: 'Segoe UI', system-ui, sans-serif;
+      font-size: 13px;
+      font-weight: 500;
+      color: #6b7280;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+    }
+
+    /* Dot progress */
+    .dots {
+      display: flex;
+      gap: 8px;
+    }
+
+    .dot {
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: #3b82f6;
+      animation: bounce-dot 1.2s ease-in-out infinite;
+    }
+
+    .dot:nth-child(1) { animation-delay: 0s; }
+    .dot:nth-child(2) { animation-delay: 0.2s; }
+    .dot:nth-child(3) { animation-delay: 0.4s; }
+
+    @keyframes bounce-dot {
+      0%, 80%, 100% { transform: scale(0.6); opacity: 0.4; }
+      40%            { transform: scale(1.1); opacity: 1; }
+    }
+  </style>
+
+  <div id="splash">
+    <div class="ring-wrapper">
+      <div class="ring"></div>
+      <div class="ring"></div>
+      <div class="ring"></div>
+      <div class="avatar">VS</div>
+    </div>
+    <span class="splash-label">Loading Portfolio</span>
+    <div class="dots">
+      <div class="dot"></div>
+      <div class="dot"></div>
+      <div class="dot"></div>
+    </div>
+  </div>
+
+  <script>
+    // Hide splash once Flutter signals it has rendered its first frame
+    window.addEventListener('flutter-first-frame', function () {
+      var splash = document.getElementById('splash');
+      if (splash) {
+        splash.classList.add('hidden');
+        setTimeout(function () { splash.remove(); }, 650);
+      }
+    });
+  </script>
+
   <script src="flutter_bootstrap.js" async></script>
+
 </body>
 
 </html>

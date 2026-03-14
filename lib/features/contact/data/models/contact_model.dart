@@ -21,21 +21,21 @@ class SocialConnection {
     return [
       SocialConnection(
         platform: 'LinkedIn',
-        handle: '@vishal.shelake',
+        handle: 'vishalshelake',
         stats: '5k+ Connections',
         icon: Icons.person,
-        url: 'https://linkedin.com/in/vishal-shelake',
+        url: 'https://www.linkedin.com/in/vishalshelake',
       ),
       SocialConnection(
         platform: 'GitHub',
-        handle: '@vishalshelake',
+        handle: 'vishalshelake',
         stats: '43+ Repos',
         icon: Icons.code,
         url: 'https://github.com/vishalshelake',
       ),
       SocialConnection(
         platform: 'Twitter',
-        handle: '@vishal_codes',
+        handle: 'vishalshelake',
         stats: '2.3k Followers',
         icon: Icons.share,
         url: 'https://twitter.com/vishalshelake',
@@ -59,8 +59,8 @@ class LocationInfo {
   static LocationInfo getCurrentLocation() {
     // In a real app, this would be dynamic based on actual timezone
     return const LocationInfo(
-      city: 'San Francisco',
-      timezone: 'PST (UTC-8)',
+      city: 'Nashik, Maharashtra',
+      timezone: 'IST (UTC+5:30)',
       currentTime: '10:42 AM',
     );
   }
