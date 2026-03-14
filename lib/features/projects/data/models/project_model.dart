@@ -417,6 +417,206 @@ class ProjectModel {
       appStoreUrl:
           'https://apps.apple.com/in/app/patent-services-usa/id1509774213',
     ),
+
+    // Wizing Bank
+    ProjectModel(
+      id: 'wizing-bank',
+      title: 'Wizing Bank',
+      shortDescription:
+          'Bilingual banking application enabling secure financial transactions.',
+      fullDescription:
+          'Wizing Bank is a comprehensive banking solution developed in Spanish and English. Built with SwiftUI and following Clean MVVM architecture, it ensures a robust and scalable codebase. The project encompasses a proprietary component library and a dedicated environment for unit testing. It integrates standard REST APIs and follows strict Bitbucket development processes for version control and code quality.',
+      categories: ['SwiftUI', 'Fintech', 'Banking'],
+      mainCategory: 'SwiftUI',
+      techStack: [
+        'SwiftUI',
+        'Clean MVVM',
+        'REST API',
+        'Unit Testing',
+        'Component Library'
+      ],
+      heroImage: 'assets/images/screenshots/WizingBank/hero.png',
+      screenshots: [],
+      organizedTechStack: {
+        'Architecture': ['Clean MVVM', 'Component Library'],
+        'Process': ['Bitbucket', 'Unit Testing'],
+        'Integration': ['REST API'],
+      },
+      features: [
+        'Bilingual support (English/Spanish)',
+        'Secure banking transactions',
+        'Modular component library',
+        'Comprehensive unit test coverage',
+      ],
+      isFeatured: true,
+    ),
+
+    // Barrb Tocasalir
+    ProjectModel(
+      id: 'barrb-tocasalir',
+      title: 'Barrb Tocasalir',
+      shortDescription:
+          'Liquor redemption platform with shop locator and QR scanning.',
+      fullDescription:
+          'Barrb Tocasalir is a liquor redemption application where users can earn and redeem points on drinks under the BAHU brand program. Developed using UIKit and Clean MVVM architecture, it features Google Maps integration for locating shops and Google OCR for scanning QR codes and barcodes for seamless coupon redemption.',
+      categories: ['iOS', 'Lifestyle', 'Loyalty'],
+      mainCategory: 'iOS',
+      techStack: [
+        'UIKit',
+        'Google Maps',
+        'Google OCR',
+        'Clean MVVM',
+        'Unit Testing'
+      ],
+      heroImage: 'assets/images/screenshots/BarrbTocasalir/hero.png',
+      screenshots: [],
+      organizedTechStack: {
+        'Architecture': ['Clean MVVM'],
+        'Location': ['Google Maps'],
+        'Scanning': ['Google OCR (QR/Barcode)'],
+      },
+      features: [
+        'Shop locator with Google Maps',
+        'QR and Barcode scanning for redemption',
+        'Loyalty point system',
+        'Clean MVVM Architecture',
+      ],
+      isFeatured: false,
+    ),
+
+    // PhactMI
+    ProjectModel(
+      id: 'phactmi',
+      title: 'PhactMI',
+      shortDescription:
+          'Medical research documentation and drug information library.',
+      fullDescription:
+          'PhactMI is a non-profit organization application that serves as a library for medical firms. It facilitates the maintenance of research papers and documentation related to medical drugs, aiding in the development process. The app is built with Clean Architecture, includes unit tests, and is deployed on both iOS and Android platforms.',
+      categories: ['iOS', 'Medical', 'Non-profit'],
+      mainCategory: 'iOS',
+      techStack: [
+        'Swift',
+        'Clean Architecture',
+        'Unit Testing',
+        'Cross-platform Deployment'
+      ],
+      heroImage: 'assets/images/screenshots/PhactMI/hero.png',
+      screenshots: [],
+      organizedTechStack: {
+        'Architecture': ['Clean Architecture'],
+        'Domain': ['Medical Research', 'Documentation'],
+      },
+      features: [
+        'Medical research paper repository',
+        'Drug development support',
+        'Clean Architecture implementation',
+        'Available on App Store',
+      ],
+      isFeatured: false,
+    ),
+
+    // Royal Caribbean
+    ProjectModel(
+      id: 'royal-caribbean',
+      title: 'Royal Caribbean',
+      shortDescription:
+          'Global cruise line application with GraphQL integration.',
+      fullDescription:
+          'A global application for Royal Caribbean developed in SwiftUI using Clean MVVM architecture. The project emphasizes code reusability through a custom component package and maintains high code quality with standard PR processes. It leverages GraphQL for efficient data fetching and backend integration.',
+      categories: ['SwiftUI', 'Travel', 'Enterprise'],
+      mainCategory: 'SwiftUI',
+      techStack: [
+        'SwiftUI',
+        'GraphQL',
+        'Clean MVVM',
+        'Component Package',
+        'Unit Testing'
+      ],
+      heroImage: 'assets/images/screenshots/RoyalCaribbean/hero.png',
+      screenshots: [],
+      organizedTechStack: {
+        'UI': ['SwiftUI', 'Component Package'],
+        'Backend': ['GraphQL'],
+        'Architecture': ['Clean MVVM'],
+      },
+      features: [
+        'Global cruise management',
+        'GraphQL data integration',
+        'Reusable component ecosystem',
+        'Strict code quality standards',
+      ],
+      isFeatured: true,
+    ),
+
+    // LA Clippers Intuit Dome
+    ProjectModel(
+      id: 'la-clippers-intuit',
+      title: 'LA Clippers Intuit Dome',
+      shortDescription:
+          'Staff application for stadium management and user monitoring.',
+      fullDescription:
+          'This specialized application for Intuit Dome staff supports iPad and large-screen iPhones. Developed in SwiftUI with Clean MVVM, it features advanced capabilities like NFC compatibility for band scanning, camera integration for user activity monitoring and face recognition, and inventory management. The app also includes robust accessibility support and localization.',
+      categories: ['SwiftUI', 'Sports', 'Enterprise', 'iPad'],
+      mainCategory: 'SwiftUI',
+      techStack: [
+        'SwiftUI',
+        'NFC',
+        'Camera/Face Recognition',
+        'Accessibility',
+        'Clean MVVM'
+      ],
+      heroImage: 'assets/images/screenshots/LAClippers/hero.png',
+      screenshots: [],
+      organizedTechStack: {
+        'Hardware': ['NFC', 'Camera', 'Face Recognition'],
+        'UI/UX': ['SwiftUI', 'Accessibility', 'Localization'],
+        'Debugging': ['LLDB'],
+      },
+      features: [
+        'Staff management portal',
+        'NFC band scanning',
+        'Real-time user activity monitoring',
+        'Inventory system',
+        'Accessibility and Localization',
+      ],
+      isFeatured: true,
+    ),
+
+    // VOX Cinemas
+    ProjectModel(
+      id: 'vox-cinemas',
+      title: 'VOX Cinemas',
+      shortDescription:
+          'Native mobile app for booking movies, events, and sports across the MENA region.',
+      fullDescription:
+          'A comprehensive mobile application for Vox Cinemas allowing users to browse movies, book tickets, manage their accounts, and access exclusive offers. The app features a modern, responsive UI, secure authentication through Auth0, and real-time data synchronization. It leverages a BFF (Backend-for-Frontend) architecture to orchestrate microservices for Content, Booking, and Payments (Checkout.com), ensuring a seamless omnichannel experience. Features include seat selection, F&B ordering, and loyalty integration (SHARE & VOX Rewards).',
+      categories: ['Flutter', 'Entertainment', 'E-commerce'],
+      mainCategory: 'Flutter',
+      techStack: [
+        'Flutter',
+        'Provider',
+        'GoRouter',
+        'BFF Architecture',
+        'Auth0',
+        'Firebase',
+        'Meilisearch'
+      ],
+      heroImage: 'assets/images/screenshots/VOX/hero.png',
+      screenshots: [],
+      organizedTechStack: {
+        'Frontend': ['Flutter', 'Provider', 'GoRouter', 'Dio'],
+        'Backend': ['BFF', 'Microservices', 'Auth0', 'Meilisearch'],
+        'Integrations': ['VISTA (Cinema)', 'Checkout.com', 'Braze', 'Adjust'],
+      },
+      features: [
+        'End-to-end Movie & Event Booking',
+        'Seat Selection & F&B Ordering',
+        'Loyalty Integration (SHARE, VOX Rewards)',
+        'Secure Payments & Digital Wallet',
+        'Real-time Personalization & Offers',
+      ],
+      isFeatured: true,
+    ),
   ];
 }
 

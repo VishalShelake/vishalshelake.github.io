@@ -9,7 +9,13 @@ import 'package:portfolio_vishal/core/constants/app_constants.dart';
 
 /// Latest insight/article card
 class InsightCard extends StatelessWidget {
-  const InsightCard({super.key});
+  /// Called when the user taps "Read Article"
+  final VoidCallback? onReadArticle;
+
+  const InsightCard({
+    super.key,
+    this.onReadArticle,
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -108,9 +114,7 @@ class InsightCard extends StatelessWidget {
                   custom.CustomButton(
                     text: 'Read Article',
                     buttonStyle: custom.ButtonStyle.text,
-                    onPressed: () {
-                      // TODO: Open article
-                    },
+                    onPressed: onReadArticle,
                   ),
                 ],
               ),

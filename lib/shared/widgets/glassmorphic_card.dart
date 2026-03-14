@@ -92,8 +92,8 @@ class _GlassmorphicCardState extends State<GlassmorphicCard>
           : null,
       child: GestureDetector(
         onTap: widget.onTap,
-        child: LayoutBuilder(
-          builder: (context, constraints) {
+        child: Builder(
+          builder: (context) {
             return AnimatedContainer(
               duration:
                   const Duration(milliseconds: AppConstants.animationNormal),

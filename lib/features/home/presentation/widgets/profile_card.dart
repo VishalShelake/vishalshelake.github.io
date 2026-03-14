@@ -8,7 +8,13 @@ import 'package:portfolio_vishal/core/constants/app_constants.dart';
 
 /// Profile card with image and bio
 class ProfileCard extends StatelessWidget {
-  const ProfileCard({super.key});
+  /// Called when the user taps "More about me"
+  final VoidCallback? onMoreAboutMe;
+
+  const ProfileCard({
+    super.key,
+    this.onMoreAboutMe,
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -87,9 +93,7 @@ class ProfileCard extends StatelessWidget {
             iconRight: true,
             buttonStyle: custom.ButtonStyle.text,
             width: double.infinity,
-            onPressed: () {
-              // TODO: Navigate to about page
-            },
+            onPressed: onMoreAboutMe,
           ),
         ],
       ),

@@ -95,7 +95,7 @@ class ProfileSection extends StatelessWidget {
 
         // Bio
         Text(
-          "I'm Vishal Shelake, iOS Developer from city of grapes in India called Nashik. I've been interested in programming since I was a child, and my first major programming project was when I was in ninth grade. It all started with Excel, where I learned that we can use a formula to determine the sum of all rows on a specific cell. Later, it piqued my interest, and I began building macros in Excel to accomplish various tasks; this is how it all began.",
+          "Senior Mobile Engineer with 8+ years building production-grade iOS and cross-platform Flutter applications. I've shipped 25+ apps across fintech, e-commerce, and enterprise domains — leading architecture decisions, mentoring teams, and integrating AI-assisted workflows to accelerate delivery.",
           style: AppTypography.bodyMedium.copyWith(
             color: AppColors.textSecondary,
             height: 1.6,

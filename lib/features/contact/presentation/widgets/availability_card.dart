@@ -12,7 +12,7 @@ class AvailabilityCard extends StatelessWidget {
 
   Future<void> _bookCall() async {
     // TODO: Add calendar booking link
-    final uri = Uri.parse('https://calendly.com/example');
+    final uri = Uri.parse('https://calendly.com/vishalshelake');
     if (await canLaunchUrl(uri)) {
       await launchUrl(uri, mode: LaunchMode.externalApplication);
     }

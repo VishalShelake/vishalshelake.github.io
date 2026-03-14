@@ -7,7 +7,13 @@ import 'package:portfolio_vishal/shared/widgets/custom_button.dart' as custom;
 
 /// Contact/CTA card with "Let's Build Together"
 class ContactCard extends StatelessWidget {
-  const ContactCard({super.key});
+  /// Called when "Get in Touch" button is tapped
+  final VoidCallback? onGetInTouch;
+
+  const ContactCard({
+    super.key,
+    this.onGetInTouch,
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -51,9 +57,7 @@ class ContactCard extends StatelessWidget {
             iconRight: true,
             buttonStyle: custom.ButtonStyle.secondary,
             width: double.infinity,
-            onPressed: () {
-              // TODO: Open contact form or email
-            },
+            onPressed: onGetInTouch,
           ),
         ],
       ),

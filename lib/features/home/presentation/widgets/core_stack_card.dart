@@ -51,6 +51,16 @@ class CoreStackCard extends StatelessWidget {
             alignment: WrapAlignment.spaceAround,
             children: const [
               TechIcon(
+                icon: Icons.flutter_dash,
+                label: 'Flutter',
+                iconColor: Color(0xFF54C5F8),
+              ),
+              TechIcon(
+                icon: Icons.phone_iphone,
+                label: 'Swift / iOS',
+                iconColor: AppColors.accentOrange,
+              ),
+              TechIcon(
                 icon: Icons.cloud_done,
                 label: 'CI/CD',
                 iconColor: AppColors.accentCyan,
@@ -58,7 +68,7 @@ class CoreStackCard extends StatelessWidget {
               TechIcon(
                 icon: Icons.local_fire_department,
                 label: 'Firebase',
-                iconColor: AppColors.accentOrange,
+                iconColor: Color(0xFFFFCA28),
               ),
               TechIcon(
                 icon: Icons.graphic_eq,
@@ -70,6 +80,21 @@ class CoreStackCard extends StatelessWidget {
                 label: 'Android',
                 iconColor: Color(0xFF3DDC84),
               ),
+              TechIcon(
+                icon: Icons.hub,
+                label: 'REST APIs',
+                iconColor: AppColors.primaryBlue,
+              ),
+              TechIcon(
+                icon: Icons.auto_awesome,
+                label: 'AI / LLMs',
+                iconColor: Color(0xFF8B5CF6),
+              ),
+              TechIcon(
+                icon: Icons.merge_type,
+                label: 'Git',
+                iconColor: Color(0xFFF05032),
+              ),
             ],
           ),
         ],
@@ -77,3 +102,4 @@ class CoreStackCard extends StatelessWidget {
     );
   }
 }
+

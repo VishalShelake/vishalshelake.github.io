@@ -1,16 +1,18 @@
 import 'package:flutter/material.dart';
 import 'package:animate_do/animate_do.dart';
+import 'package:url_launcher/url_launcher.dart';
 import '../../../shared/widgets/nav_bar.dart';
 import '../../../shared/widgets/grid_background.dart';
 import '../../../core/constants/app_constants.dart';
 import '../../../core/utils/responsive_utils.dart';
 import '../../../core/services/analytics_mixin.dart';
 import '../../../core/navigation/app_navigation.dart';
+import '../../../core/theme/app_colors.dart';
+import '../../../core/theme/app_typography.dart';
 import 'widgets/hero_section.dart';
 import 'widgets/profile_card.dart';
 import 'widgets/core_stack_card.dart';
 import 'widgets/contact_card.dart';
-import 'widgets/featured_project_card.dart';
 import 'widgets/insight_card.dart';
 import 'widgets/footer.dart';
 
@@ -27,6 +29,49 @@ class _HomeScreenState extends State<HomeScreen> with AnalyticsScreenMixin {
   String get screenName => 'Home';
 
   int _currentNavIndex = 0;
+
+  Future<void> _launchResume() async {
+    trackInteraction('Download Resume');
+    final url = Uri.parse(AppConstants.resumeUrl);
+    if (await canLaunchUrl(url)) {
+      await launchUrl(url);
+    }
+  }
+
+  void _navigateToTimeline() {
+    trackNavigation('Timeline');
+    AppNavigation.navigateTo(
+      context,
+      1, // Timeline index
+      currentIndex: _currentNavIndex,
+    );
+  }
+
+  void _navigateToAboutMe() {
+    trackNavigation('About Me');
+    AppNavigation.navigateTo(
+      context,
+      3, // About Me index
+      currentIndex: _currentNavIndex,
+    );
+  }
+
+  void _navigateToContact() {
+    trackNavigation('Contact');
+    AppNavigation.navigateTo(
+      context,
+      4, // Contact index
+      currentIndex: _currentNavIndex,
+    );
+  }
+
+  Future<void> _launchArticle() async {
+    trackInteraction('Read Article');
+    final url = Uri.parse('https://medium.com/@vishal-shelake');
+    if (await canLaunchUrl(url)) {
+      await launchUrl(url);
+    }
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -105,13 +150,18 @@ class _HomeScreenState extends State<HomeScreen> with AnalyticsScreenMixin {
       children: [
         FadeInUp(
           duration: const Duration(milliseconds: 600),
-          child: const HeroSection(),
+          child: HeroSection(
+            onDownloadResume: _launchResume,
+            onViewTimeline: _navigateToTimeline,
+          ),
         ),
         const SizedBox(height: AppConstants.spacing24),
         FadeInUp(
           duration: const Duration(milliseconds: 600),
           delay: const Duration(milliseconds: 100),
-          child: const ProfileCard(),
+          child: ProfileCard(
+            onMoreAboutMe: _navigateToAboutMe,
+          ),
         ),
         const SizedBox(height: AppConstants.spacing24),
         FadeInUp(
@@ -123,19 +173,17 @@ class _HomeScreenState extends State<HomeScreen> with AnalyticsScreenMixin {
         FadeInUp(
           duration: const Duration(milliseconds: 600),
           delay: const Duration(milliseconds: 300),
-          child: const ContactCard(),
-        ),
-        const SizedBox(height: AppConstants.spacing24),
-        FadeInUp(
-          duration: const Duration(milliseconds: 600),
-          delay: const Duration(milliseconds: 400),
-          child: const FeaturedProjectCard(),
+          child: ContactCard(
+            onGetInTouch: _navigateToContact,
+          ),
         ),
         const SizedBox(height: AppConstants.spacing24),
         FadeInUp(
           duration: const Duration(milliseconds: 600),
           delay: const Duration(milliseconds: 500),
-          child: const InsightCard(),
+          child: InsightCard(
+            onReadArticle: _launchArticle,
+          ),
         ),
       ],
     );
@@ -152,7 +200,10 @@ class _HomeScreenState extends State<HomeScreen> with AnalyticsScreenMixin {
               flex: 3,
               child: FadeInLeft(
                 duration: const Duration(milliseconds: 600),
-                child: const HeroSection(),
+                child: HeroSection(
+                  onDownloadResume: _launchResume,
+                  onViewTimeline: _navigateToTimeline,
+                ),
               ),
             ),
             const SizedBox(width: AppConstants.spacing24),
@@ -163,7 +214,9 @@ class _HomeScreenState extends State<HomeScreen> with AnalyticsScreenMixin {
                   FadeInRight(
                     duration: const Duration(milliseconds: 600),
                     delay: const Duration(milliseconds: 100),
-                    child: const ProfileCard(),
+                    child: ProfileCard(
+                      onMoreAboutMe: _navigateToAboutMe,
+                    ),
                   ),
                   const SizedBox(height: AppConstants.spacing24),
                   FadeInRight(
@@ -184,7 +237,7 @@ class _HomeScreenState extends State<HomeScreen> with AnalyticsScreenMixin {
               child: FadeInLeft(
                 duration: const Duration(milliseconds: 600),
                 delay: const Duration(milliseconds: 300),
-                child: const FeaturedProjectCard(),
+                child: const CoreStackCard(),
               ),
             ),
             const SizedBox(width: AppConstants.spacing24),
@@ -192,7 +245,9 @@ class _HomeScreenState extends State<HomeScreen> with AnalyticsScreenMixin {
               child: FadeInRight(
                 duration: const Duration(milliseconds: 600),
                 delay: const Duration(milliseconds: 400),
-                child: const ContactCard(),
+                child: ContactCard(
+                  onGetInTouch: _navigateToContact,
+                ),
               ),
             ),
           ],
@@ -201,7 +256,9 @@ class _HomeScreenState extends State<HomeScreen> with AnalyticsScreenMixin {
         FadeInUp(
           duration: const Duration(milliseconds: 600),
           delay: const Duration(milliseconds: 500),
-          child: const InsightCard(),
+          child: InsightCard(
+            onReadArticle: _launchArticle,
+          ),
         ),
       ],
     );
@@ -209,70 +266,181 @@ class _HomeScreenState extends State<HomeScreen> with AnalyticsScreenMixin {
 
   // Desktop: 3-column masonry layout matching design reference
   Widget _buildDesktopLayout() {
-    return Row(
-      crossAxisAlignment: CrossAxisAlignment.start,
-      children: [
-        // Left column
-        Expanded(
-          flex: 2,
-          child: Column(
-            children: [
-              FadeInLeft(
-                duration: const Duration(milliseconds: 600),
-                child: const HeroSection(),
-              ),
-              const SizedBox(height: AppConstants.spacing24),
-              FadeInLeft(
-                duration: const Duration(milliseconds: 600),
-                delay: const Duration(milliseconds: 300),
-                child: const FeaturedProjectCard(),
-              ),
-            ],
+    return IntrinsicHeight(
+      child: Row(
+        crossAxisAlignment: CrossAxisAlignment.stretch,
+        children: [
+          // Left column
+          Expanded(
+            flex: 2,
+            child: Column(
+              mainAxisSize: MainAxisSize.max,
+              children: [
+                FadeInLeft(
+                  duration: const Duration(milliseconds: 600),
+                  child: HeroSection(
+                    onDownloadResume: _launchResume,
+                    onViewTimeline: _navigateToTimeline,
+                  ),
+                ),
+                const SizedBox(height: AppConstants.spacing24),
+                Expanded(
+                  child: FadeInLeft(
+                    duration: const Duration(milliseconds: 600),
+                    delay: const Duration(milliseconds: 300),
+                    child: const SizedBox(
+                      width: double.infinity,
+                      child: CoreStackCard(),
+                    ),
+                  ),
+                ),
+              ],
+            ),
           ),
-        ),
-        const SizedBox(width: AppConstants.spacing24),
+          const SizedBox(width: AppConstants.spacing24),
 
-        // Middle column
-        Expanded(
-          flex: 1,
-          child: Column(
-            children: [
-              FadeInUp(
-                duration: const Duration(milliseconds: 600),
-                delay: const Duration(milliseconds: 100),
-                child: const ProfileCard(),
-              ),
-              const SizedBox(height: AppConstants.spacing24),
-              FadeInUp(
-                duration: const Duration(milliseconds: 600),
-                delay: const Duration(milliseconds: 200),
-                child: const CoreStackCard(),
-              ),
-            ],
+          // Middle column
+          Expanded(
+            flex: 1,
+            child: Column(
+              children: [
+                FadeInUp(
+                  duration: const Duration(milliseconds: 600),
+                  delay: const Duration(milliseconds: 100),
+                  child: _buildViewProjectsCard(),
+                ),
+                const SizedBox(height: AppConstants.spacing24),
+                FadeInUp(
+                  duration: const Duration(milliseconds: 600),
+                  delay: const Duration(milliseconds: 200),
+                  child: ProfileCard(
+                    onMoreAboutMe: _navigateToAboutMe,
+                  ),
+                ),
+              ],
+            ),
           ),
-        ),
-        const SizedBox(width: AppConstants.spacing24),
+          const SizedBox(width: AppConstants.spacing24),
 
-        // Right column
-        Expanded(
-          flex: 1,
-          child: Column(
-            children: [
-              FadeInRight(
-                duration: const Duration(milliseconds: 600),
-                delay: const Duration(milliseconds: 250),
-                child: const ContactCard(),
-              ),
-              const SizedBox(height: AppConstants.spacing24),
-              FadeInRight(
-                duration: const Duration(milliseconds: 600),
-                delay: const Duration(milliseconds: 400),
-                child: const InsightCard(),
-              ),
+          // Right column
+          Expanded(
+            flex: 1,
+            child: Column(
+              children: [
+                FadeInRight(
+                  duration: const Duration(milliseconds: 600),
+                  delay: const Duration(milliseconds: 250),
+                  child: ContactCard(
+                    onGetInTouch: _navigateToContact,
+                  ),
+                ),
+                const SizedBox(height: AppConstants.spacing24),
+                FadeInRight(
+                  duration: const Duration(milliseconds: 600),
+                  delay: const Duration(milliseconds: 400),
+                  child: InsightCard(
+                    onReadArticle: _launchArticle,
+                  ),
+                ),
+              ],
+            ),
+          ),
+        ],
+      ),
+    );
+  }
+
+  Widget _buildViewProjectsCard() {
+    return GestureDetector(
+      onTap: () {
+        trackNavigation('Projects');
+        AppNavigation.navigateTo(
+          context,
+          2, // Projects tab index
+          currentIndex: _currentNavIndex,
+        );
+      },
+      child: Container(
+        width: double.infinity,
+        padding: const EdgeInsets.all(AppConstants.spacing24),
+        decoration: BoxDecoration(
+          gradient: LinearGradient(
+            colors: [
+              AppColors.primaryBlue.withOpacity(0.15),
+              AppColors.primaryBlue.withOpacity(0.05),
             ],
+            begin: Alignment.topLeft,
+            end: Alignment.bottomRight,
+          ),
+          borderRadius: BorderRadius.circular(AppConstants.radiusXLarge),
+          border: Border.all(
+            color: AppColors.primaryBlue.withOpacity(0.3),
+            width: 1.5,
           ),
         ),
-      ],
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Row(
+              children: [
+                Container(
+                  width: 32,
+                  height: 32,
+                  decoration: BoxDecoration(
+                    color: AppColors.primaryBlue.withOpacity(0.2),
+                    borderRadius: BorderRadius.circular(AppConstants.radiusSmall),
+                  ),
+                  child: const Icon(
+                    Icons.folder_special_rounded,
+                    size: 16,
+                    color: AppColors.primaryBlue,
+                  ),
+                ),
+                const SizedBox(width: AppConstants.spacing12),
+                Text(
+                  'SELECTED WORK',
+                  style: AppTypography.label.copyWith(
+                    color: AppColors.primaryBlue,
+                    letterSpacing: 1.2,
+                  ),
+                ),
+              ],
+            ),
+            const SizedBox(height: AppConstants.spacing16),
+            Text(
+              '25+',
+              style: AppTypography.h1.copyWith(
+                color: AppColors.textPrimary,
+                fontWeight: FontWeight.bold,
+              ),
+            ),
+            Text(
+              'Apps Shipped',
+              style: AppTypography.bodyMedium.copyWith(
+                color: AppColors.textSecondary,
+              ),
+            ),
+            const SizedBox(height: AppConstants.spacing24),
+            Row(
+              children: [
+                Text(
+                  'View All Projects',
+                  style: AppTypography.bodyMedium.copyWith(
+                    color: AppColors.primaryBlue,
+                    fontWeight: FontWeight.w600,
+                  ),
+                ),
+                const SizedBox(width: AppConstants.spacing8),
+                const Icon(
+                  Icons.arrow_forward_rounded,
+                  size: 16,
+                  color: AppColors.primaryBlue,
+                ),
+              ],
+            ),
+          ],
+        ),
+      ),
     );
   }
 }
