@@ -36,7 +36,7 @@ dependencies:
   cupertino_icons: ^1.0.8
   
   # Modern typography
-  google_fonts: ^6.1.0
+  google_fonts: ^8.0.2
   
   # SVG support for tech icons
   flutter_svg: ^2.0.10
