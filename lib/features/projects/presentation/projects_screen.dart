@@ -27,7 +27,7 @@ class _ProjectsScreenState extends State<ProjectsScreen>
   String get screenName => 'Projects';
 
   String _selectedCategory = 'All';
-  final List<String> _categories = ['All', 'Flutter', 'iOS', 'AI'];
+  final List<String> _categories = ['All', 'Flutter', 'iOS'];
 
   List<ProjectModel> get _filteredProjects {
     if (_selectedCategory == 'All') {

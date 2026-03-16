@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:url_launcher/url_launcher.dart';
 import '../../../../shared/widgets/glassmorphic_card.dart';
 import '../../../../shared/widgets/custom_button.dart' as custom;
 import '../../../../core/theme/app_colors.dart';
@@ -29,7 +30,7 @@ class _ContactFormCardState extends State<ContactFormCard> {
     super.dispose();
   }
 
-  void _handleSubmit() {
+  Future<void> _handleSubmit() async {
     final logger = LoggerService();
 
     if (_formKey.currentState?.validate() ?? false) {
@@ -40,17 +41,49 @@ class _ContactFormCardState extends State<ContactFormCard> {
         'hasMessage': _messageController.text.isNotEmpty,
       });
 
-      // TODO: Implement form submission
-      ScaffoldMessenger.of(context).showSnackBar(
-        SnackBar(
-          content: Text('Message sent successfully!'),
-          backgroundColor: AppColors.accentGreen,
-        ),
-      );
-      // Clear form
-      _nameController.clear();
-      _emailController.clear();
-      _messageController.clear();
+      try {
+        final subject = Uri.encodeComponent('New Contact Inquiry from ${_nameController.text}');
+        final body = Uri.encodeComponent(
+            'Name: ${_nameController.text}\n'
+            'Email: ${_emailController.text}\n\n'
+            'Message:\n${_messageController.text}');
+
+        final mailtoUri = Uri.parse('mailto:${AppConstants.emailAddress}?subject=$subject&body=$body');
+
+        if (await canLaunchUrl(mailtoUri)) {
+          await launchUrl(mailtoUri);
+          if (mounted) {
+            ScaffoldMessenger.of(context).showSnackBar(
+              const SnackBar(
+                content: Text('Email client opened successfully!'),
+                backgroundColor: AppColors.accentGreen,
+              ),
+            );
+            // Clear form
+            _nameController.clear();
+            _emailController.clear();
+            _messageController.clear();
+          }
+        } else {
+          if (mounted) {
+            ScaffoldMessenger.of(context).showSnackBar(
+              const SnackBar(
+                content: Text('Could not open email client.'),
+                backgroundColor: Colors.redAccent,
+              ),
+            );
+          }
+        }
+      } catch (e) {
+        if (mounted) {
+          ScaffoldMessenger.of(context).showSnackBar(
+            SnackBar(
+              content: Text('An error occurred: $e'),
+              backgroundColor: Colors.redAccent,
+            ),
+          );
+        }
+      }
     } else {
       // Log form validation failure
       logger.logWarning('Contact form validation failed');

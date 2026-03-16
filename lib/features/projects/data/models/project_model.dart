@@ -4,7 +4,7 @@ class ProjectModel {
   final String title;
   final String shortDescription;
   final String fullDescription;
-  final List<String> categories; // e.g., ['Flutter', 'Mobile', 'AI']
+  final List<String> categories; // e.g., ['Flutter', 'iOS', 'Web']
   final String mainCategory; // Primary category for filtering
   final List<String> techStack;
   final Map<String, List<String>> organizedTechStack; // Organized by category
@@ -426,8 +426,8 @@ class ProjectModel {
           'Bilingual banking application enabling secure financial transactions.',
       fullDescription:
           'Wizing Bank is a comprehensive banking solution developed in Spanish and English. Built with SwiftUI and following Clean MVVM architecture, it ensures a robust and scalable codebase. The project encompasses a proprietary component library and a dedicated environment for unit testing. It integrates standard REST APIs and follows strict Bitbucket development processes for version control and code quality.',
-      categories: ['SwiftUI', 'Fintech', 'Banking'],
-      mainCategory: 'SwiftUI',
+      categories: ['iOS', 'Fintech', 'Banking'],
+      mainCategory: 'iOS',
       techStack: [
         'SwiftUI',
         'Clean MVVM',
@@ -435,8 +435,12 @@ class ProjectModel {
         'Unit Testing',
         'Component Library'
       ],
-      heroImage: 'assets/images/screenshots/WizingBank/hero.png',
-      screenshots: [],
+      heroImage: 'assets/images/screenshots/WiZinkBank/Logo-Wizink.webp',
+      screenshots: [
+        'assets/images/screenshots/WiZinkBank/wz1.png',
+        'assets/images/screenshots/WiZinkBank/wz2.png',
+        'assets/images/screenshots/WiZinkBank/wz4.png',
+      ],
       organizedTechStack: {
         'Architecture': ['Clean MVVM', 'Component Library'],
         'Process': ['Bitbucket', 'Unit Testing'],
@@ -448,13 +452,15 @@ class ProjectModel {
         'Modular component library',
         'Comprehensive unit test coverage',
       ],
+      appStoreUrl:
+          'https://apps.apple.com/es/app/wizink-bank-tu-banco-online/id1120078772',
       isFeatured: true,
     ),
 
     // Barrb Tocasalir
     ProjectModel(
       id: 'barrb-tocasalir',
-      title: 'Barrb Tocasalir',
+      title: 'QDAMOS (Barrb Tocasalir)',
       shortDescription:
           'Liquor redemption platform with shop locator and QR scanning.',
       fullDescription:
@@ -468,8 +474,12 @@ class ProjectModel {
         'Clean MVVM',
         'Unit Testing'
       ],
-      heroImage: 'assets/images/screenshots/BarrbTocasalir/hero.png',
-      screenshots: [],
+      heroImage: 'assets/images/screenshots/BarrbMahu/Logo-barrb.webp',
+      screenshots: [
+        'assets/images/screenshots/BarrbMahu/barrb1.webp',
+        'assets/images/screenshots/BarrbMahu/barrb2.webp',
+        'assets/images/screenshots/BarrbMahu/barrb4.webp',
+      ],
       organizedTechStack: {
         'Architecture': ['Clean MVVM'],
         'Location': ['Google Maps'],
@@ -481,6 +491,7 @@ class ProjectModel {
         'Loyalty point system',
         'Clean MVVM Architecture',
       ],
+      appStoreUrl: 'https://apps.apple.com/es/app/qdamos/id1599741387',
       isFeatured: false,
     ),
 
@@ -500,8 +511,11 @@ class ProjectModel {
         'Unit Testing',
         'Cross-platform Deployment'
       ],
-      heroImage: 'assets/images/screenshots/PhactMI/hero.png',
-      screenshots: [],
+      heroImage: 'assets/images/screenshots/PhactMI/Logo-Phactmi.webp',
+      screenshots: [
+        'assets/images/screenshots/PhactMI/Phactmi2.webp',
+        'assets/images/screenshots/PhactMI/Phactmi3.webp',
+      ],
       organizedTechStack: {
         'Architecture': ['Clean Architecture'],
         'Domain': ['Medical Research', 'Documentation'],
@@ -512,6 +526,7 @@ class ProjectModel {
         'Clean Architecture implementation',
         'Available on App Store',
       ],
+      appStoreUrl: 'https://apps.apple.com/us/app/phactmi/id6468638050',
       isFeatured: false,
     ),
 
@@ -523,8 +538,8 @@ class ProjectModel {
           'Global cruise line application with GraphQL integration.',
       fullDescription:
           'A global application for Royal Caribbean developed in SwiftUI using Clean MVVM architecture. The project emphasizes code reusability through a custom component package and maintains high code quality with standard PR processes. It leverages GraphQL for efficient data fetching and backend integration.',
-      categories: ['SwiftUI', 'Travel', 'Enterprise'],
-      mainCategory: 'SwiftUI',
+      categories: ['iOS', 'Travel', 'Enterprise'],
+      mainCategory: 'iOS',
       techStack: [
         'SwiftUI',
         'GraphQL',
@@ -532,8 +547,15 @@ class ProjectModel {
         'Component Package',
         'Unit Testing'
       ],
-      heroImage: 'assets/images/screenshots/RoyalCaribbean/hero.png',
-      screenshots: [],
+      heroImage: 'assets/images/screenshots/RoyalCarribian/Logo-Royal.webp',
+      screenshots: [
+        'assets/images/screenshots/RoyalCarribian/RC1.webp',
+        'assets/images/screenshots/RoyalCarribian/RC2.webp',
+        'assets/images/screenshots/RoyalCarribian/RC3.webp',
+        'assets/images/screenshots/RoyalCarribian/RC4.webp',
+        'assets/images/screenshots/RoyalCarribian/RC5.webp',
+        'assets/images/screenshots/RoyalCarribian/RC6.webp',
+      ],
       organizedTechStack: {
         'UI': ['SwiftUI', 'Component Package'],
         'Backend': ['GraphQL'],
@@ -545,6 +567,8 @@ class ProjectModel {
         'Reusable component ecosystem',
         'Strict code quality standards',
       ],
+      appStoreUrl:
+          'https://apps.apple.com/us/app/royal-caribbean-international/id1260728016',
       isFeatured: true,
     ),
 
@@ -556,8 +580,8 @@ class ProjectModel {
           'Staff application for stadium management and user monitoring.',
       fullDescription:
           'This specialized application for Intuit Dome staff supports iPad and large-screen iPhones. Developed in SwiftUI with Clean MVVM, it features advanced capabilities like NFC compatibility for band scanning, camera integration for user activity monitoring and face recognition, and inventory management. The app also includes robust accessibility support and localization.',
-      categories: ['SwiftUI', 'Sports', 'Enterprise', 'iPad'],
-      mainCategory: 'SwiftUI',
+      categories: ['iOS', 'Sports', 'Enterprise', 'iPad'],
+      mainCategory: 'iOS',
       techStack: [
         'SwiftUI',
         'NFC',
@@ -565,8 +589,12 @@ class ProjectModel {
         'Accessibility',
         'Clean MVVM'
       ],
-      heroImage: 'assets/images/screenshots/LAClippers/hero.png',
-      screenshots: [],
+      heroImage: 'assets/images/screenshots/LAClippers/Logo-LAClippers.webp',
+      screenshots: [
+        'assets/images/screenshots/LAClippers/LA1.webp',
+        'assets/images/screenshots/LAClippers/LA2.webp',
+        'assets/images/screenshots/LAClippers/LA4.webp',
+      ],
       organizedTechStack: {
         'Hardware': ['NFC', 'Camera', 'Face Recognition'],
         'UI/UX': ['SwiftUI', 'Accessibility', 'Localization'],
@@ -579,6 +607,8 @@ class ProjectModel {
         'Inventory system',
         'Accessibility and Localization',
       ],
+      appStoreUrl:
+          'https://apps.apple.com/us/app/la-clippers-intuit-dome/id6476565235',
       isFeatured: true,
     ),
 
@@ -599,14 +629,22 @@ class ProjectModel {
         'BFF Architecture',
         'Auth0',
         'Firebase',
-        'Meilisearch'
+        'Meilisearch',
+        'Analytics',
+        'CMS',
+        'CRM'
       ],
-      heroImage: 'assets/images/screenshots/VOX/hero.png',
-      screenshots: [],
+      heroImage: 'assets/images/screenshots/VoxCinema/Logo-VOX.webp',
+      screenshots: [
+        'assets/images/screenshots/VoxCinema/Vox2.png',
+        'assets/images/screenshots/VoxCinema/Vox3.png',
+        'assets/images/screenshots/VoxCinema/Vox4.png',
+      ],
       organizedTechStack: {
         'Frontend': ['Flutter', 'Provider', 'GoRouter', 'Dio'],
         'Backend': ['BFF', 'Microservices', 'Auth0', 'Meilisearch'],
         'Integrations': ['VISTA (Cinema)', 'Checkout.com', 'Braze', 'Adjust'],
+        'Platform': ['Analytics', 'CMS', 'CRM'],
       },
       features: [
         'End-to-end Movie & Event Booking',
@@ -615,6 +653,7 @@ class ProjectModel {
         'Secure Payments & Digital Wallet',
         'Real-time Personalization & Offers',
       ],
+      appStoreUrl: 'https://apps.apple.com/ae/app/vox-cinemas-app/id669495038',
       isFeatured: true,
     ),
   ];
