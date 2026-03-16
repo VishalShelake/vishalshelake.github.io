@@ -148,9 +148,9 @@ class _AboutMeScreenState extends State<AboutMeScreen>
           delay: const Duration(milliseconds: 300),
           child: const ExperienceEraCard(
             icon: Icons.phone_iphone,
-            title: 'The iOS Era (2016–2020)',
+            title: 'Native iOS Development',
             description:
-                'Began my mobile career building native iOS apps with Swift and Objective-C — shipping production features across App Store releases, mastering UIKit, Core Data, and RESTful integrations. Developed a strong foundation in Apple\'s ecosystem by driving quality in resource-constrained environments where independent problem-solving was essential.',
+                'Extensive experience building native iOS apps with Swift and Objective-C — shipping production features across App Store releases, mastering UIKit, Core Data, and RESTful integrations. I actively maintain a strong foundation in Apple\'s ecosystem, ready to deliver high-quality native experiences.',
           ),
         ),
         const SizedBox(height: AppConstants.spacing24),
@@ -159,9 +159,9 @@ class _AboutMeScreenState extends State<AboutMeScreen>
           delay: const Duration(milliseconds: 350),
           child: const ExperienceEraCard(
             icon: Icons.flutter_dash,
-            title: 'The Flutter Transition',
+            title: 'Flutter & Cross-Platform',
             description:
-                'Architected and delivered a full cross-platform Flutter application supporting both iOS and Android — reducing build complexity compared to a native dual-track approach. This strategic pivot toward unified mobile engineering now defines my core stack and enables faster, higher-quality delivery.',
+                'Architecting and delivering scalable cross-platform Flutter applications supporting both iOS and Android. By combining Flutter\'s efficiency with my deep native iOS expertise, I am fully equipped to handle and lead both unified cross-platform solutions as well as dedicated native iOS projects.',
           ),
         ),
         const SizedBox(height: AppConstants.spacing24),
@@ -229,9 +229,9 @@ class _AboutMeScreenState extends State<AboutMeScreen>
           delay: const Duration(milliseconds: 300),
           child: const ExperienceEraCard(
             icon: Icons.phone_iphone,
-            title: 'The iOS Era (2016–2020)',
+            title: 'Native iOS Development',
             description:
-                'Began my mobile career building native iOS apps with Swift and Objective-C — shipping production features across App Store releases, mastering UIKit, Core Data, and RESTful integrations. Developed a strong foundation in Apple\'s ecosystem by driving quality in resource-constrained environments where independent problem-solving was essential.',
+                'Extensive experience building native iOS apps with Swift and Objective-C — shipping production features across App Store releases, mastering UIKit, Core Data, and RESTful integrations. I actively maintain a strong foundation in Apple\'s ecosystem, ready to deliver high-quality native experiences.',
           ),
         ),
         const SizedBox(height: AppConstants.spacing24),
@@ -240,9 +240,9 @@ class _AboutMeScreenState extends State<AboutMeScreen>
           delay: const Duration(milliseconds: 350),
           child: const ExperienceEraCard(
             icon: Icons.flutter_dash,
-            title: 'The Flutter Transition',
+            title: 'Flutter & Cross-Platform',
             description:
-                'Architected and delivered a full cross-platform Flutter application supporting both iOS and Android — reducing build complexity compared to a native dual-track approach. This strategic pivot toward unified mobile engineering now defines my core stack and enables faster, higher-quality delivery.',
+                'Architecting and delivering scalable cross-platform Flutter applications supporting both iOS and Android. By combining Flutter\'s efficiency with my deep native iOS expertise, I am fully equipped to handle and lead both unified cross-platform solutions as well as dedicated native iOS projects.',
           ),
         ),
         const SizedBox(height: AppConstants.spacing24),
@@ -328,9 +328,9 @@ class _AboutMeScreenState extends State<AboutMeScreen>
                 delay: const Duration(milliseconds: 300),
                 child: const ExperienceEraCard(
                   icon: Icons.phone_iphone,
-                  title: 'The iOS Era (2016–2020)',
+                  title: 'Native iOS Development',
                   description:
-                      'Began my mobile career building native iOS apps with Swift and Objective-C — shipping production features across App Store releases, mastering UIKit, Core Data, and RESTful integrations. Developed a strong foundation in Apple\'s ecosystem by driving quality in resource-constrained environments where independent problem-solving was essential.',
+                      'Extensive experience building native iOS apps with Swift and Objective-C — shipping production features across App Store releases, mastering UIKit, Core Data, and RESTful integrations. I actively maintain a strong foundation in Apple\'s ecosystem, ready to deliver high-quality native experiences.',
                 ),
               ),
             ),
@@ -341,9 +341,9 @@ class _AboutMeScreenState extends State<AboutMeScreen>
                 delay: const Duration(milliseconds: 350),
                 child: const ExperienceEraCard(
                   icon: Icons.flutter_dash,
-                  title: 'The Flutter Transition',
+                  title: 'Flutter & Cross-Platform',
                   description:
-                      'Architected and delivered a full cross-platform Flutter application supporting both iOS and Android — reducing build complexity compared to a native dual-track approach. This strategic pivot toward unified mobile engineering now defines my core stack and enables faster, higher-quality delivery.',
+                      'Architecting and delivering scalable cross-platform Flutter applications supporting both iOS and Android. By combining Flutter\'s efficiency with my deep native iOS expertise, I am fully equipped to handle and lead both unified cross-platform solutions as well as dedicated native iOS projects.',
                 ),
               ),
             ),

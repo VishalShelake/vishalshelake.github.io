@@ -48,20 +48,16 @@ class SocialConnection {
 class LocationInfo {
   final String city;
   final String timezone;
-  final String currentTime;
 
   const LocationInfo({
     required this.city,
     required this.timezone,
-    required this.currentTime,
   });
 
   static LocationInfo getCurrentLocation() {
-    // In a real app, this would be dynamic based on actual timezone
     return const LocationInfo(
       city: 'Nashik, Maharashtra',
       timezone: 'IST (UTC+5:30)',
-      currentTime: '10:42 AM',
     );
   }
 }

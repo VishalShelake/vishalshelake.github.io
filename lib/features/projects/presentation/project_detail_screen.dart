@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:animate_do/animate_do.dart';
+import 'package:url_launcher/url_launcher.dart';
 import '../../../shared/widgets/nav_bar.dart';
 import '../../../core/theme/app_colors.dart';
 import '../../../core/theme/app_typography.dart';
@@ -261,7 +262,8 @@ class _ProjectDetailScreenState extends State<ProjectDetailScreen> {
             ),
 
           if (widget.project.githubUrl != null ||
-              widget.project.demoUrl != null) ...[
+              widget.project.demoUrl != null ||
+              widget.project.appStoreUrl != null) ...[
             const SizedBox(height: AppConstants.spacing24),
             const Divider(color: AppColors.borderColor),
             const SizedBox(height: AppConstants.spacing24),
@@ -271,14 +273,25 @@ class _ProjectDetailScreenState extends State<ProjectDetailScreen> {
               _buildActionButton(
                 label: 'View on GitHub',
                 icon: Icons.code,
+                onTap: () => _launchUrl(widget.project.githubUrl!),
               ),
             if (widget.project.githubUrl != null &&
-                widget.project.demoUrl != null)
+                (widget.project.demoUrl != null || widget.project.appStoreUrl != null))
               const SizedBox(height: AppConstants.spacing12),
             if (widget.project.demoUrl != null)
               _buildActionButton(
                 label: 'View Demo',
                 icon: Icons.open_in_new,
+                onTap: () => _launchUrl(widget.project.demoUrl!),
+                isPrimary: widget.project.appStoreUrl == null,
+              ),
+            if (widget.project.demoUrl != null && widget.project.appStoreUrl != null)
+              const SizedBox(height: AppConstants.spacing12),
+            if (widget.project.appStoreUrl != null)
+              _buildActionButton(
+                label: 'View on App Store',
+                icon: Icons.apple,
+                onTap: () => _launchUrl(widget.project.appStoreUrl!),
                 isPrimary: true,
               ),
           ],
@@ -287,41 +300,58 @@ class _ProjectDetailScreenState extends State<ProjectDetailScreen> {
     );
   }
 
+  Future<void> _launchUrl(String url) async {
+    final uri = Uri.tryParse(url);
+    if (uri != null && await canLaunchUrl(uri)) {
+      await launchUrl(uri, mode: LaunchMode.externalApplication);
+    } else {
+      final logger = LoggerService();
+      logger.logError('Could not launch url: $url');
+    }
+  }
+
   Widget _buildActionButton({
     required String label,
     required IconData icon,
+    required VoidCallback onTap,
     bool isPrimary = false,
   }) {
-    return Container(
-      width: double.infinity,
-      padding: const EdgeInsets.symmetric(
-        vertical: AppConstants.spacing12,
-      ),
-      decoration: BoxDecoration(
-        color: isPrimary ? AppColors.primaryBlue : Colors.transparent,
-        borderRadius: BorderRadius.circular(AppConstants.radiusSmall),
-        border: Border.all(
-          color: AppColors.primaryBlue,
-          width: 1,
-        ),
-      ),
-      child: Row(
-        mainAxisAlignment: MainAxisAlignment.center,
-        children: [
-          Icon(
-            icon,
-            size: 18,
-            color: isPrimary ? AppColors.textPrimary : AppColors.primaryBlue,
+    return MouseRegion(
+      cursor: SystemMouseCursors.click,
+      child: GestureDetector(
+        onTap: onTap,
+        child: Container(
+          width: double.infinity,
+          padding: const EdgeInsets.symmetric(
+            vertical: AppConstants.spacing12,
           ),
-          const SizedBox(width: AppConstants.spacing8),
-          Text(
-            label,
-            style: AppTypography.bodyMedium.copyWith(
-              color: isPrimary ? AppColors.textPrimary : AppColors.primaryBlue,
-              fontWeight: FontWeight.w600,
+          decoration: BoxDecoration(
+            color: isPrimary ? AppColors.primaryBlue : Colors.transparent,
+            borderRadius: BorderRadius.circular(AppConstants.radiusSmall),
+            border: Border.all(
+              color: AppColors.primaryBlue,
+              width: 1,
             ),
           ),
-        ],
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Icon(
+                icon,
+                size: 18,
+                color: isPrimary ? AppColors.textPrimary : AppColors.primaryBlue,
+              ),
+              const SizedBox(width: AppConstants.spacing8),
+              Text(
+                label,
+                style: AppTypography.bodyMedium.copyWith(
+                  color: isPrimary ? AppColors.textPrimary : AppColors.primaryBlue,
+                  fontWeight: FontWeight.w600,
+                ),
+              ),
+            ],
+          ),
+        ),
       ),
     );
   }

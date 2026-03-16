@@ -1,3 +1,4 @@
+import 'dart:async';
 import 'package:flutter/material.dart';
 import '../../../../shared/widgets/glassmorphic_card.dart';
 import '../../../../core/theme/app_colors.dart';
@@ -6,13 +7,52 @@ import '../../../../core/constants/app_constants.dart';
 import '../../data/models/contact_model.dart';
 
 /// Location card showing current base and timezone
-class LocationCard extends StatelessWidget {
+class LocationCard extends StatefulWidget {
   final LocationInfo location;
 
   const LocationCard({
     super.key,
     required this.location,
   });
+
+  @override
+  State<LocationCard> createState() => _LocationCardState();
+}
+
+class _LocationCardState extends State<LocationCard> {
+  late Timer _timer;
+  String _currentTime = '';
+
+  @override
+  void initState() {
+    super.initState();
+    _updateTime();
+    _timer = Timer.periodic(const Duration(seconds: 1), (_) => _updateTime());
+  }
+
+  @override
+  void dispose() {
+    _timer.cancel();
+    super.dispose();
+  }
+
+  void _updateTime() {
+    final now = DateTime.now().toUtc().add(const Duration(hours: 5, minutes: 30));
+    final hour = now.hour > 12 ? now.hour - 12 : (now.hour == 0 ? 12 : now.hour);
+    final minute = now.minute.toString().padLeft(2, '0');
+    final amPm = now.hour >= 12 ? 'PM' : 'AM';
+    final newTime = '$hour:$minute $amPm';
+    
+    if (_currentTime != newTime) {
+      if (mounted) {
+        setState(() {
+          _currentTime = newTime;
+        });
+      } else {
+        _currentTime = newTime;
+      }
+    }
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -47,7 +87,7 @@ class LocationCard extends StatelessWidget {
               const SizedBox(width: AppConstants.spacing12),
               Expanded(
                 child: Text(
-                  location.city,
+                  widget.location.city,
                   style: AppTypography.h2.copyWith(
                     fontSize: 28,
                   ),
@@ -73,7 +113,7 @@ class LocationCard extends StatelessWidget {
                 ),
                 const SizedBox(width: AppConstants.spacing8),
                 Text(
-                  '${location.timezone} • ${location.currentTime}',
+                  '${widget.location.timezone} • $_currentTime',
                   style: AppTypography.bodySmall.copyWith(
                     color: AppColors.textSecondary,
                   ),

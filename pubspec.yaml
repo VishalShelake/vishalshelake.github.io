@@ -92,15 +92,21 @@ flutter:
     - assets/images/screenshots/
     - assets/images/screenshots/Aldo/
     - assets/images/screenshots/ArtToFrame/
+    - assets/images/screenshots/BarrbMahu/
     - assets/images/screenshots/EscapeCity/
+    - assets/images/screenshots/LAClippers/
     - assets/images/screenshots/Lilacard/
+    - assets/images/screenshots/Mofpi/
     - assets/images/screenshots/PUS/
+    - assets/images/screenshots/PhactMI/
     - assets/images/screenshots/QOH/
+    - assets/images/screenshots/RoyalCarribian/
     - assets/images/screenshots/SYPrints/
     - assets/images/screenshots/UnionBankHealthcare/
+    - assets/images/screenshots/VoxCinema/
+    - assets/images/screenshots/WiZinkBank/
     - assets/images/screenshots/eNlightMeet/
     - assets/images/screenshots/iPAS/
-    - assets/images/screenshots/Mofpi/
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/to/resolution-aware-images

@@ -95,6 +95,21 @@ class CoreStackCard extends StatelessWidget {
                 label: 'Git',
                 iconColor: Color(0xFFF05032),
               ),
+              TechIcon(
+                icon: Icons.analytics,
+                label: 'Analytics',
+                iconColor: Color(0xFFF29C1F),
+              ),
+              TechIcon(
+                icon: Icons.dashboard_customize,
+                label: 'CMS',
+                iconColor: Color(0xFF16A085),
+              ),
+              TechIcon(
+                icon: Icons.storefront,
+                label: 'CRM',
+                iconColor: Color(0xFFE91E63),
+              ),
             ],
           ),
         ],

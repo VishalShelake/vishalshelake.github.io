@@ -1,3 +1,4 @@
+import 'dart:ui';
 import 'package:flutter/material.dart';
 import 'package:animate_do/animate_do.dart';
 import '../../data/models/project_model.dart';
@@ -119,20 +120,39 @@ class _ProjectCardState extends State<ProjectCard> {
                 topLeft: Radius.circular(AppConstants.radiusXLarge),
                 topRight: Radius.circular(AppConstants.radiusXLarge),
               ),
-              child: Image.asset(
-                widget.project.heroImage!,
-                fit: BoxFit.cover,
-                width: double.infinity,
-                height: double.infinity,
-                errorBuilder: (context, error, stackTrace) {
-                  return Center(
-                    child: Icon(
-                      _getProjectIcon(),
-                      size: 64,
-                      color: AppColors.textPrimary.withOpacity(0.8),
+              child: Stack(
+                fit: StackFit.expand,
+                children: [
+                  // Blurred background to fill empty sides elegantly
+                  Image.asset(
+                    widget.project.heroImage!,
+                    fit: BoxFit.cover,
+                  ),
+                  Positioned.fill(
+                    child: BackdropFilter(
+                      filter: ImageFilter.blur(sigmaX: 12, sigmaY: 12),
+                      child: Container(
+                        color: Colors.black.withOpacity(0.35),
+                      ),
                     ),
-                  );
-                },
+                  ),
+                  // Centered, full, un-cropped screenshot
+                  Image.asset(
+                    widget.project.heroImage!,
+                    fit: BoxFit.contain,
+                    width: double.infinity,
+                    height: double.infinity,
+                    errorBuilder: (context, error, stackTrace) {
+                      return Center(
+                        child: Icon(
+                          _getProjectIcon(),
+                          size: 64,
+                          color: AppColors.textPrimary.withOpacity(0.8),
+                        ),
+                      );
+                    },
+                  ),
+                ],
               ),
             )
           : Center(
