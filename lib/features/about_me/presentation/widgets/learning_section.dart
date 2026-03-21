@@ -48,7 +48,7 @@ class LearningSection extends StatelessWidget {
 
           // Title
           Text(
-            'Exploring Rust & Generative UI',
+            'Exploring Agentic & Generative UI',
             style: AppTypography.h3.copyWith(
               fontWeight: FontWeight.bold,
             ),
@@ -68,7 +68,12 @@ class LearningSection extends StatelessWidget {
           // View Projects Button
           ElevatedButton(
             onPressed: () {
-              // TODO: Navigate to projects
+              trackNavigation('Projects');
+              AppNavigation.navigateTo(
+                context,
+                2, // Projects tab index
+                currentIndex: _currentNavIndex,
+              );
             },
             style: ElevatedButton.styleFrom(
               backgroundColor: AppColors.primaryBlue,
