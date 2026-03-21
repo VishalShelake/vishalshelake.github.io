@@ -95,7 +95,7 @@ class ProfileSection extends StatelessWidget {
 
         // Bio
         Text(
-          "Senior Mobile Engineer with 8+ years building production-grade iOS and cross-platform Flutter applications. I've shipped 25+ apps across fintech, e-commerce, and enterprise domains — leading architecture decisions, mentoring teams, and integrating AI-assisted workflows to accelerate delivery.",
+          "Senior Mobile Engineer with 8 years building production-grade iOS and cross-platform Flutter applications. I've shipped 25+ apps across fintech, e-commerce, and enterprise domains — leading architecture decisions, mentoring teams, and integrating AI-assisted workflows to accelerate delivery.",
           style: AppTypography.bodyMedium.copyWith(
             color: AppColors.textSecondary,
             height: 1.6,

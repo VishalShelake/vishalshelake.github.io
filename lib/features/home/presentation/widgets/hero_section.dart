@@ -35,7 +35,7 @@ class HeroSection extends StatelessWidget {
 
           const SizedBox(height: AppConstants.spacing24),
 
-          // Large "8+" display
+          // Large "8" display
           Text(
             '${AppConstants.yearsOfExperience}+',
             style: AppTypography.display,

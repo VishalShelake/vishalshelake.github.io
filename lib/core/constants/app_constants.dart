@@ -47,8 +47,8 @@ class AppConstants {
   // URLs
   static const String resumeUrl = 'assets/documents/Resume_Vishal_Shelake_Oct22.pdf';
   static const String linkedInUrl = 'https://www.linkedin.com/in/vishalshelake';
-  static const String githubUrl = 'https://github.com/vishalshelake';
-  static const String twitterUrl = 'https://twitter.com/vishalshelake';
+  static const String githubUrl = 'https://github.com/G-Vishal';
+  static const String twitterUrl = 'https://x.com/Vishal_Shelake9';
   static const String emailAddress = 'vishalshelake1@outlook.com';
 
   // Tech stack

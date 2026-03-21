@@ -129,7 +129,7 @@ class _AboutMeScreenState extends State<AboutMeScreen>
           child: const StatsCard(
             icon: Icons.access_time,
             label: 'Years Experience',
-            value: '8+',
+            value: '8',
           ),
         ),
         const SizedBox(height: AppConstants.spacing24),
@@ -205,7 +205,7 @@ class _AboutMeScreenState extends State<AboutMeScreen>
                 child: const StatsCard(
                   icon: Icons.access_time,
                   label: 'Years Experience',
-                  value: '8+',
+                  value: '8',
                 ),
               ),
             ),
@@ -298,7 +298,7 @@ class _AboutMeScreenState extends State<AboutMeScreen>
                     child: const StatsCard(
                       icon: Icons.access_time,
                       label: 'Years Experience',
-                      value: '8+',
+                      value: '8',
                     ),
                   ),
                   const SizedBox(height: AppConstants.spacing24),

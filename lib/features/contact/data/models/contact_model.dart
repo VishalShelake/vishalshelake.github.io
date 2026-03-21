@@ -24,21 +24,21 @@ class SocialConnection {
         handle: 'vishalshelake',
         stats: '5k+ Connections',
         icon: Icons.person,
-        url: 'https://www.linkedin.com/in/vishalshelake',
+        url: AppConstants.linkedInUrl,
       ),
       SocialConnection(
         platform: 'GitHub',
         handle: 'vishalshelake',
         stats: '43+ Repos',
         icon: Icons.code,
-        url: 'https://github.com/vishalshelake',
+        url: AppConstants.githubUrl,
       ),
       SocialConnection(
         platform: 'Twitter',
-        handle: 'vishalshelake',
-        stats: '2.3k Followers',
+        handle: 'Vishal_Shelake9',
+        stats: '100 Followers',
         icon: Icons.share,
-        url: 'https://twitter.com/vishalshelake',
+        url: AppConstants.twitterUrl,
       ),
     ];
   }

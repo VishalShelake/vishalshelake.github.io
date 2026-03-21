@@ -4,7 +4,7 @@ import 'app_colors.dart';
 
 /// Typography system for the portfolio
 class AppTypography {
-  // Display styles (for large numbers like "8+")
+  // Display styles (for large numbers like "8")
   static TextStyle display = GoogleFonts.outfit(
     fontSize: 96,
     fontWeight: FontWeight.bold,
