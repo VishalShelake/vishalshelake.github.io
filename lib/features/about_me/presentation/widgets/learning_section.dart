@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import '../../../../core/navigation/app_navigation.dart';
 import '../../../../core/theme/app_colors.dart';
 import '../../../../core/theme/app_typography.dart';
 import '../../../../core/constants/app_constants.dart';
@@ -68,11 +69,10 @@ class LearningSection extends StatelessWidget {
           // View Projects Button
           ElevatedButton(
             onPressed: () {
-              trackNavigation('Projects');
               AppNavigation.navigateTo(
                 context,
                 2, // Projects tab index
-                currentIndex: _currentNavIndex,
+                currentIndex: 2,
               );
             },
             style: ElevatedButton.styleFrom(
