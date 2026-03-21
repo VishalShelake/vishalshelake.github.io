@@ -64,12 +64,12 @@ class HeroSection extends StatelessWidget {
             spacing: AppConstants.spacing16,
             runSpacing: AppConstants.spacing16,
             children: [
-              custom.CustomButton(
-                text: 'Download Resume',
-                icon: Icons.download,
-                buttonStyle: custom.ButtonStyle.primary,
-                onPressed: onDownloadResume,
-              ),
+              // custom.CustomButton(
+              //   text: 'Download Resume',
+              //   icon: Icons.download,
+              //   buttonStyle: custom.ButtonStyle.primary,
+              //   onPressed: onDownloadResume,
+              // ),
               custom.CustomButton(
                 text: 'View Timeline',
                 buttonStyle: custom.ButtonStyle.secondary,

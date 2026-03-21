@@ -106,38 +106,38 @@ class ProfileSection extends StatelessWidget {
         // Action buttons
         Row(
           children: [
-            ElevatedButton.icon(
-              onPressed: () async {
-                final Uri url = Uri.parse(
-                    'assets/documents/Resume_Vishal_Shelake_Oct22.pdf');
-                // Note: For local assets like PDF, we might need a specific viewer or just try launching it.
-                // Since this is a web/mobile hybrid, launching an asset path directly as URL might not work
-                // without the server serving it or a specific plugin.
-                // However, for now we will try launching it as a resource.
-                // Actually, for assets, we usually need to construct a full URL or use a viewer.
-                // Assuming standard behavior for this portfolio context.
-                // A better approach for local assets might be sharing or opening.
-                // Let's try launching as a file URL or relative path.
-                // Given the context, let's treat it as a relative URL which web can handle if served.
-                if (!await launchUrl(url)) {
-                  debugPrint('Could not launch \$url');
-                }
-              },
-              icon: const Icon(Icons.download, size: 18),
-              label: const Text('Download Resume'),
-              style: ElevatedButton.styleFrom(
-                backgroundColor: AppColors.primaryBlue,
-                foregroundColor: AppColors.textPrimary,
-                padding: const EdgeInsets.symmetric(
-                  horizontal: AppConstants.spacing16,
-                  vertical: AppConstants.spacing12,
-                ),
-                shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(AppConstants.radiusSmall),
-                ),
-              ),
-            ),
-            const SizedBox(width: AppConstants.spacing12),
+            // ElevatedButton.icon(
+            //   onPressed: () async {
+            //     final Uri url = Uri.parse(
+            //         'assets/documents/Resume_Vishal_Shelake_Oct22.pdf');
+            //     // Note: For local assets like PDF, we might need a specific viewer or just try launching it.
+            //     // Since this is a web/mobile hybrid, launching an asset path directly as URL might not work
+            //     // without the server serving it or a specific plugin.
+            //     // However, for now we will try launching it as a resource.
+            //     // Actually, for assets, we usually need to construct a full URL or use a viewer.
+            //     // Assuming standard behavior for this portfolio context.
+            //     // A better approach for local assets might be sharing or opening.
+            //     // Let's try launching as a file URL or relative path.
+            //     // Given the context, let's treat it as a relative URL which web can handle if served.
+            //     if (!await launchUrl(url)) {
+            //       debugPrint('Could not launch \$url');
+            //     }
+            //   },
+            //   icon: const Icon(Icons.download, size: 18),
+            //   label: const Text('Download Resume'),
+            //   style: ElevatedButton.styleFrom(
+            //     backgroundColor: AppColors.primaryBlue,
+            //     foregroundColor: AppColors.textPrimary,
+            //     padding: const EdgeInsets.symmetric(
+            //       horizontal: AppConstants.spacing16,
+            //       vertical: AppConstants.spacing12,
+            //     ),
+            //     shape: RoundedRectangleBorder(
+            //       borderRadius: BorderRadius.circular(AppConstants.radiusSmall),
+            //     ),
+            //   ),
+            // ),
+            // const SizedBox(width: AppConstants.spacing12),
             TextButton.icon(
               onPressed: () async {
                 const url = 'https://twitter.com/vishal_shelake9';
