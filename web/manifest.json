@@ -1,11 +1,11 @@
 {
-    "name": "portfolio_vishal",
-    "short_name": "portfolio_vishal",
+    "name": "Vishal Shelake — Senior Mobile Engineer Portfolio",
+    "short_name": "Vishal Shelake",
     "start_url": ".",
     "display": "standalone",
-    "background_color": "#0175C2",
-    "theme_color": "#0175C2",
-    "description": "A new Flutter project.",
+    "background_color": "#0d1117",
+    "theme_color": "#3b82f6",
+    "description": "Portfolio of Vishal Shelake, Senior Mobile Engineer with 8+ years of experience and 25+ apps shipped across Flutter, iOS, and Android.",
     "orientation": "portrait-primary",
     "prefer_related_applications": false,
     "icons": [
